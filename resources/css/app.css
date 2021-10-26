@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.smalltext {
+    padding-top: 2px;
+    font-size: 14px;
+}
+/* .pagination li{
+    display:inline;
+} */
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {
+    display: inline;
+}
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+ul.pagination li.active a {
+    background-color: #3e416d;
+    color: white;
+    border: 1px solid #3e416d;
+}
+
+ul.pagination li a:hover:not(.active) {
+    background-color: #ddd;
+}
+span.paginacion{
+    background-color: #3e416d;
+    color: white;
+    border: 1px solid #3e416d;
+}
+  /*
+  contador
+  */
+  #clockdiv {
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 20px;
+}
+
+#clockdiv>div {
+    padding: 5px;
+    border-radius: 3px;
+ 
+    display: inline-block;
+}
+
+#clockdiv div>span {
+    padding: 5px;
+    border-radius: 3px;
+
+    display: inline-block;
+}
+
+
+/* 
+diseño menu personalizado
+**/
+html{
+    min-height: 100%;
+  }
+  
+  /* used by alpine.js to hide prefetched content */
+  [x-cloak] { 
+    display: none; 
+  }
+  
+  /* used for hiding menu on higher resolutions */
+  @media (min-width:768px) {
+    .lg\:block-important {
+      display: block !important;
+    }
+  }
+  
+  /* used for product carousel */
+  .snap {
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth
+  }
+  .snap::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .snap > div {
+    scroll-snap-align: center;
+  }
+  
+  .disable-scrollbars::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* Chrome/Safari/Webkit */
+  }
+  .disable-scrollbars {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+  }
+  /*
+  kokies
+  **/
+  .cookie-container {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: #2f3640;
+    color: #f5f6fa;
+    padding: 0 32px;
+    box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
+  
+    transition: 400ms;
+  }
+  
+  .cookie-container.active {
+    bottom: 0;
+  }
+  
+  .cookie-container a {
+    color: #f5f6fa;
+  }
